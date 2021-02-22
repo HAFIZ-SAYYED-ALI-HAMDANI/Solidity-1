@@ -1,20 +1,15 @@
-pragma solidity ^0.5.0;
+ pragma solidity ^0.5.0;
 contract First{
-    enum Gender{
-        male,
-        female
-    }
-    struct student{
-        string name;
-        uint age;
-        bool isFeepaid;
-        Gender gender;
-        uint[] list;
-    }
-    function managestruct() public view returns(uint){
-        student memory s1=student("Rehan",20,true,Gender.male);
-        student memory s2=student("Tahan",30,false,Gender.female);
-        Gender g=s2.gender;
-        return s1.age;
-    }
+    struct Employee{
+    string name;
+    uint age;
+    bool isMarried;
 }
+Employee emp1=Employee("Zeeshan",2,false);
+Employee emp2=Employee("Mudasir",20,true);
+Employee emp3=Employee("Rehan",26,false);
+}
+function data()public view returns(uint){
+    return emp1.age;
+}
+
